@@ -55,8 +55,11 @@ body {
 
 /* Поля и метки */
 .form-group {
+    display: flex;
+    flex-direction: column; /* метка сверху, поле снизу */
     margin-bottom: 15px;
 }
+
 
 label {
     display: block;
@@ -68,11 +71,14 @@ label {
 input, select {
     width: 100%;
     padding: 10px 12px;
+    height: 42px; /* фиксированная высота для всех полей */
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
+    box-sizing: border-box; /* чтобы padding не влиял на ширину */
     transition: all 0.3s;
 }
+
 
 input:focus, select:focus {
     border-color: #007bff;
@@ -82,17 +88,13 @@ input:focus, select:focus {
 
 /* Кнопка */
 button {
-    width: 100%;
+    width: 100%;       /* точно такая же ширина, как поля */
     padding: 12px;
-    margin-top: 20px;
-    background: #007bff;
-    color: white;
     font-size: 18px;
-    border: none;
     border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    margin-top: 15px;  /* отступ сверху */
 }
+
 
 button:hover {
     background: #0056b3;
@@ -110,88 +112,4 @@ button:hover {
     color: #2c662d;
     text-align: center;
     line-height: 1.6;
-}
-
-/* Адаптация для экранов меньше 480px (телефоны) */
-@media (max-width: 480px) {
-    .calculator-card {
-        width: 90%;           /* карточка почти во всю ширину экрана */
-        padding: 20px;        /* уменьшаем внутренние отступы */
-        border-radius: 12px;  /* чуть меньше закругление */
-    }
-
-    .calculator-card h1 {
-        font-size: 22px;      /* уменьшаем заголовок */
-    }
-
-    input, select {
-        font-size: 14px;      /* немного уменьшаем шрифт */
-        padding: 8px 10px;    /* уменьшаем поля ввода */
-    }
-
-    button {
-        font-size: 16px;      /* кнопка чуть меньше */
-        padding: 10px;
-    }
-
-    .result {
-        font-size: 14px;      /* результат читаем на маленьком экране */
-        padding: 10px;
-    }
-}
-
-/* Адаптация для планшетов (до 768px) */
-@media (max-width: 768px) {
-    .calculator-card {
-        width: 70%;           /* чуть меньше ширина */
-        padding: 25px;        /* чуть меньше отступы */
-    }
-
-    .calculator-card h1 {
-        font-size: 24px;
-    }
-
-    input, select {
-        font-size: 15px;
-        padding: 9px 12px;
-    }
-
-    button {
-        font-size: 17px;
-        padding: 11px;
-    }
-}
-
-/* Компактная версия для телефонов (до 480px) */
-@media (max-width: 480px) {
-    .calculator-card {
-        width: 95%;           /* почти весь экран */
-        padding: 15px;        /* минимальные внутренние отступы */
-        border-radius: 10px;
-    }
-
-    .calculator-card h1 {
-        font-size: 20px;      /* уменьшенный заголовок */
-        margin-bottom: 15px;
-    }
-
-    .form-group {
-        margin-bottom: 10px;  /* меньше отступ между полями */
-    }
-
-    input, select {
-        font-size: 13px;      /* компактный шрифт */
-        padding: 6px 8px;     /* меньше поля ввода */
-    }
-
-    button {
-        font-size: 15px;      /* кнопка чуть меньше */
-        padding: 8px 10px;
-    }
-
-    .result {
-        font-size: 13px;      /* результат компактный */
-        padding: 8px;
-        line-height: 1.4;
-    }
 }
