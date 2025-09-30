@@ -161,3 +161,37 @@ button:hover {
         padding: 11px;
     }
 }
+
+/* Компактная версия для телефонов (до 480px) */
+@media (max-width: 480px) {
+    .calculator-card {
+        width: 95%;           /* почти весь экран */
+        padding: 15px;        /* минимальные внутренние отступы */
+        border-radius: 10px;
+    }
+
+    .calculator-card h1 {
+        font-size: 20px;      /* уменьшенный заголовок */
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;  /* меньше отступ между полями */
+    }
+
+    input, select {
+        font-size: 13px;      /* компактный шрифт */
+        padding: 6px 8px;     /* меньше поля ввода */
+    }
+
+    button {
+        font-size: 15px;      /* кнопка чуть меньше */
+        padding: 8px 10px;
+    }
+
+    .result {
+        font-size: 13px;      /* результат компактный */
+        padding: 8px;
+        line-height: 1.4;
+    }
+}
