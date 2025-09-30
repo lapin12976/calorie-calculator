@@ -1,64 +1,58 @@
-/* Общие стили страницы */
+/* Общие стили страницы с фоном */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     min-height: 100vh;
 
-    /* Фон с фотографией */
-    background-image: url('background.jpg');
-    background-size: cover;      /* Заполняет весь экран */
-    background-position: center; /* Центрирует изображение */
+    background-image: url('background.jpg'); /* ваша фотография */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Фиксируем фон при прокрутке */
+    background-attachment: fixed;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Полупрозрачная карточка калькулятора */
-.calculator-card {
-    background: rgba(255, 255, 255, 0.85); /* полупрозрачный белый фон */
-    border-radius: 16px;
-    padding: 30px 40px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    width: 100%;
-    max-width: 400px;
+/* Анимация появления */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-
-/* Центрируем карточку калькулятора */
+/* Центрированная карточка */
 .page-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     width: 100%;
+    padding: 20px;
 }
 
-/* Карточка калькулятора */
 .calculator-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 16px;
     padding: 30px 40px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     width: 100%;
     max-width: 400px;
+    animation: fadeIn 0.8s ease-out;
 }
 
 /* Заголовок */
 .calculator-card h1 {
     text-align: center;
     margin-bottom: 25px;
-    color: #333;
+    color: #222;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-/* Группы полей */
+/* Поля и метки */
 .form-group {
     margin-bottom: 15px;
 }
 
-/* Метки */
 label {
     display: block;
     margin-bottom: 5px;
@@ -66,7 +60,6 @@ label {
     color: #555;
 }
 
-/* Поля ввода и селект */
 input, select {
     width: 100%;
     padding: 10px 12px;
@@ -101,11 +94,11 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* Блок результата */
+/* Результат */
 .result {
     margin-top: 25px;
     padding: 15px;
-    background: #e9f7ef;
+    background: rgba(233, 247, 239, 0.9);
     border-left: 5px solid #28a745;
     border-radius: 8px;
     font-weight: 600;
