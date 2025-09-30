@@ -29,26 +29,27 @@ body {
     width: 100%;
     padding: 20px;
 }
-
 .calculator-card {
-    background: rgba(255, 255, 255, 0.05); /* почти полностью прозрачный фон */
+    background: rgba(255, 255, 255, 0.1); /* лёгкий полупрозрачный фон */
     border: 2px solid rgba(255, 255, 255, 0.3); /* прозрачная рамка */
     border-radius: 16px;
     padding: 30px 40px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 
-    /* Эффект glassmorphism */
+    /* Эффект стекла */
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px); /* для Safari */
+
+    /* Чтобы фон блока был прозрачным и фильтр работал */
+    background-clip: padding-box;
+
     transition: border 0.3s, box-shadow 0.3s;
 }
 
 .calculator-card:hover {
     border: 2px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
-
-
 
 
 
