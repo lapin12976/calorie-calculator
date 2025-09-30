@@ -87,23 +87,26 @@ input:focus, select:focus {
 }
 
 /* Кнопка */
-button {
+button, input[type="button"], input[type="submit"] {
     width: 100%;
     padding: 12px;
     margin-top: 20px;
-    background: #007bff;
-    color: white;
+    background-color: #007bff; /* голубой фон */
+    color: white;               /* белый текст */
     font-size: 18px;
-    border: none;
+    border: none;               /* убираем рамку */
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
 }
 
-button:hover {
-    background: #0056b3;
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: #0056b3; /* темно-голубой при наведении */
     transform: translateY(-2px);
 }
+
 
 /* Результат */
 .result {
