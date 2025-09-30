@@ -104,18 +104,23 @@ input:focus, select:focus {
 
 /* Кнопка */
 button {
-    width: 100%;       /* точно такая же ширина, как поля */
+    width: 100%;
     padding: 12px;
+    margin-top: 20px;
+    background-color: #007bff;   /* синий сплошной фон */
+    color: white;                 /* белый текст */
     font-size: 18px;
+    border: none;
     border-radius: 10px;
-    margin-top: 15px;  /* отступ сверху */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
-
 
 button:hover {
-    background: #0056b3;
+    background-color: #0056b3;   /* темнее при наведении */
     transform: translateY(-2px);
 }
+
 
 /* Результат */
 .result {
@@ -128,4 +133,56 @@ button:hover {
     color: #2c662d;
     text-align: center;
     line-height: 1.6;
+}
+
+
+
+/* Компактная адаптация для телефонов до 480px */
+@media (max-width: 480px) {
+
+    /* Карточка */
+    .calculator-card {
+        width: 95%;           /* почти весь экран */
+        padding: 15px 20px;   /* минимальные внутренние отступы */
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Заголовок */
+    .calculator-card h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* Поля и метки */
+    .form-group {
+        margin-bottom: 10px;  /* уменьшаем отступы между полями */
+    }
+
+    label {
+        font-size: 14px;      /* меньше шрифт меток */
+        margin-bottom: 3px;
+    }
+
+    input, select {
+        font-size: 14px;       /* компактный текст */
+        padding: 6px 8px;      /* меньше поля ввода */
+        height: 36px;          /* фиксированная высота */
+    }
+
+    /* Кнопка */
+    button {
+        font-size: 16px;
+        padding: 8px 10px;
+        margin-top: 15px;
+    }
+
+    /* Результат */
+    .result {
+        font-size: 14px;
+        padding: 8px;
+        line-height: 1.4;
+        margin-top: 15px;
+    }
 }
