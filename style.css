@@ -31,7 +31,12 @@ body {
 }
 
 .calculator-card {
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15); /* полупрозрачный фон */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* прозрачная рамка */
+    border-radius: 16px;
+    padding: 30px 40px; /* внутренние отступы */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px); /* размывает фон за карточкой */
     transition: border 0.3s, box-shadow 0.3s;
 }
 
@@ -39,6 +44,7 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
+
 
 
 /* Заголовок */
